@@ -1,0 +1,27 @@
+import random
+def print_with_stars(message):
+    print(f"********** {message} *****")
+    
+def rock_paper_scissors():
+    
+    options =["1","2","3"]
+
+    while True:
+        user_ch = input('Choose rock (1), paper (2) or scissors (3): ')
+        cpu_ch = random.choice(options)
+        
+        if user_ch == "quit":
+            break
+            
+        if user_ch == "ball":
+            print_with_stars("Not allowed")
+            continue
+        
+        if user_ch == cpu_ch:
+            print("Tie")
+        elif(user_ch == "1" and cpu_ch == "3") or (user_ch == "2" and cpu_ch == "1") or (user_ch == "3" and cpu_ch == "2"):
+            print_with_stars("You win!")
+        else:
+            print_with_stars("You lost!")
+
+rock_paper_scissors()
