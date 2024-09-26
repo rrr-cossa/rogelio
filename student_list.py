@@ -67,7 +67,7 @@ def menu():
         if choice == "5":
             break
         else:
-            "Not valid"
+            "Not valid!"
         
 
 # Start the program
