@@ -87,3 +87,24 @@ print(integers)
 list_names = ["Messi","Suarez","Neymar"]
 list_names.append("Nico")
 print(list_names)
+
+list_of_squares = []
+for int in range (1,10):
+    square = int **2
+    list_of_squares.append(square)
+print(list_of_squares)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#[expression for int in list if condition]
+squared2 = [item**2 for item in range(1,10)]
+print(squared2)
+
+for number in numbers:
+    print(number**3)
+    
+cubic = [numbers**3]
+print(cubic)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+doubled_numbers = [num*2 for num in numbers if num%3 == 0]
+print(doubled_numbers)
