@@ -58,17 +58,15 @@ def menu():
 
         if choice == "1":
             add_student()
-        if choice == "2":
+        elif choice == "2":
             remove_student()
-        if choice == "3":
+        elif choice == "3":
             pop_student()
-        if choice == "4":
+        elif choice == "4":
             update_student()
-        if choice == "5":
-            break
-        else:
-            "Not valid!"
-        
+        elif choice == "5":
+            exit()
+            break 
 
 # Start the program
 menu()
