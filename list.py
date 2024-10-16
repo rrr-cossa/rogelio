@@ -77,6 +77,7 @@ science [0] = "biology"
 science [2] = "geology"
 print(science)
 
+#Delete an element
 integers = [2, 4, 9, 20, 27]
 integers.remove(4)
 print(integers)
@@ -84,6 +85,7 @@ print(integers)
 integers.pop(3)
 print(integers)
 
+#Append new elements to the list
 list_names = ["Messi","Suarez","Neymar"]
 list_names.append("Nico")
 print(list_names)
@@ -99,10 +101,11 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 squared2 = [item**2 for item in range(1,10)]
 print(squared2)
 
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 for number in numbers:
     print(number**3)
     
-cubic = [numbers**3]
+cubic = [num**3 for num in numbers]
 print(cubic)
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
