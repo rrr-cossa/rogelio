@@ -66,7 +66,7 @@ def menu():
             update_student()
         elif choice == "5":
             exit()
-            break 
+            break
 
 # Start the program
 menu()
