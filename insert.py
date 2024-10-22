@@ -15,5 +15,3 @@ print(Lobos)
 Lobos = ["Joseph","Hyrum","Alan","Rogelio","Rafa","Levi","Abinadi","Moroni","Nico","Benja","Angel"]
 Lobos.sort(reverse = True, key=len)
 print(Lobos)
-
-GOATS = ["Buffon","Roberto Carlos","Maldini","Beckenbauer","Cafu","Maradona","Zidane","Pele","Messi","Cristiano Ronaldo",""]
