@@ -17,8 +17,8 @@ print(random_integers)
 # Requirements: Use append(), insert(), and remove() or pop().
 list_stuff = ["age", "name", "is_student", "total", "my_list", "employee_data", "result", "counter", "file_path", "pi"]
 list_stuff.append("last_name")
-list_stuff.insert(2, "time_arrived")
-list_stuff.remove("is_student")
+list_stuff.insert(1, "time_arrived")
+list_stuff.pop(1)
 print(list_stuff)
 
 #TODO Project 3: Indexing and Slicing (6 points)
