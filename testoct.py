@@ -46,7 +46,7 @@ print(even_sum)
 # Task: Create a new list, and name it square_numbers, that contains the squares of the original list numbers.
 # Requirements: Use a list comprehension for this task.
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-square_numbers = [item**2 for item in range(1,11)]
+square_numbers = [item**2 for item in number_list]
 print(square_numbers)
 
 #TODO Project 6: Filtering with List Comprehensions (10 points)
