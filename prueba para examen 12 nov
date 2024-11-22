@@ -1,0 +1,71 @@
+import csv
+
+def read_csv(filename):
+    accidents_dictionary = {}
+    with open(filename, mode="r", newline = "") as file:
+        reader = csv.reader(file)
+        next(reader)
+        
+        for row in reader:
+            Year = row[0]
+            Fatalities = row[1]
+            Injuries = row[2]
+            Crashes = row[3]
+            Fatal_Crashes = row[4]
+            Distraction_Affected_Fatal_Crashes = row[5]
+            Fatal_Crashes_involving_Cell_Phone_Use = row[6]
+            Fatal_Crashes_involving_Excessive_Speed = row[7]
+            Fatal_Crashes_while_Driving_under_the_Influence= row[8]
+            Fatal_Crashes_involving_Fatigue_or_Illness = row[9]
+            accidents_dictionary[Year]= [Fatalities, Injuries, Crashes, Fatal_Crashes, Distraction_Affected_Fatal_Crashes, Fatal_Crashes_involving_Cell_Phone_Use, Fatal_Crashes_involving_Excessive_Speed, Fatal_Crashes_while_Driving_under_the_Influence, Fatal_Crashes_involving_Fatigue_or_Illness]
+    return accidents_dictionary
+
+def display_info(accident_info):
+    if accident_info:
+        print("Accident Information")
+        print("1. Year")
+        print("2. Fatalities")
+        print("3. Injuries")
+        print("4. Crashes")
+        print("5. Fatal Crashes")
+        print("6. Distraction Affected Fatal Crashes")
+        print("7. Fatal Crashes Involving Cell Phone Use")
+        print("8. Fatal Crashes Involving Excessive Speed")
+        print("9. Fatal Crashes While Driving Under The Influnce")
+        print("10. Fatal Crashes Involving Fatigue or Ilness")
+    
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            print(f"Year: {accident_info[0]}")
+        elif choice == "2":
+            print(f"Fatalities: {accident_info[1]}")    
+        elif choice == "3":
+            print(f"Injuries: {accident_info[2]}")
+        elif choice == "4":
+            print(f"Crashes: {accident_info[3]}")
+        elif choice == "5":
+            print(f"Fatal Crashes: {accident_info[4]}")
+        elif choice == "6":
+            print(f"Distraction Affected Fatal Crashes: {accident_info[5]}")
+        elif choice == "7":
+            print(f"Fatal Crashes Involving Cell Phone Use: {accident_info[6]}")
+        elif choice == "8":
+            print(f"Fatal Crashes Involving Excessive Speed: {accident_info[7]}")
+        elif choice == "9":
+            print(f"Fatal Crashes while driving under the influence: {accident_info[8]}")
+        elif choice =="10":
+            print(f"Fatal Crashes involving fatigue or illness: {accident_info[9]}")
+    else:
+        print("Year not found")    
+        
+def main():
+    file_name = ("accidents.csv")
+    
+    crashes = read_csv(file_name) 
+    year = input("Write the year: ")
+    year_info = crashes.get(year)
+    
+    display_info(year_info)
+        
+main()
